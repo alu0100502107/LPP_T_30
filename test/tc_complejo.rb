@@ -55,4 +55,13 @@ class TestComplejo < Test::Unit::TestCase
     assert_equal("(-3 -2i)", (@z5 / @z6).to_s, "División")
   end
 
+  # Test todo
+  def test_all
+    assert_equal("(-12 -12i)", (Complejo.new(4,4).scalar -3).to_s, "ALL: Producto escalar")
+    assert_equal("(6 +7i)", (Complejo.new(4,4) + Complejo.new(2,3)).to_s, "ALL: Suma")
+    assert_equal("(2 +1i)", (Complejo.new(4,4) - Complejo.new(2,3)).to_s, "ALL: Resta")
+    assert_equal("(-4 +24i)", (Complejo.new(4,4) * Complejo.new(2,3)).to_s, "ALL: Multiplicación")
+    assert_equal("(-3 -2i)", (Complejo.new(-1,-5) / Complejo.new(1,1)).to_s, "ALL: División")
+  end
+
 end
